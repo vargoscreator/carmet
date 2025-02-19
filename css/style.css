@@ -343,7 +343,7 @@ label{
     opacity: 0;
     pointer-events: none;
     transition: all .2s ease;
-    z-index: 1;
+    z-index: -1;
 }
 .header__basket.active::before {
     opacity: 1;
