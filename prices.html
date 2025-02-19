@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Prices</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body"> 
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <button class="header__burger"></button>
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <div class="header__content">
+                    <nav class="header__menu">
+                        <ul>
+                            <div class="header__menu-top">
+                                <h3 class="header__menu-name">меню</h3>
+                                <button class="header__menu-close">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                        <path d="M21.3621 18.877L14.9851 12.5L21.3621 6.12305C22.0505 5.43457 22.0505 4.32617 21.3621 3.6377C20.6736 2.94922 19.5652 2.94922 18.8767 3.6377L12.4998 10.0146L6.1228 3.6377C5.43433 2.94922 4.32593 2.94922 3.63745 3.6377C2.94897 4.32617 2.94897 5.43457 3.63745 6.12305L10.0144 12.5L3.63745 18.877C2.94897 19.5654 2.94897 20.6738 3.63745 21.3623C4.32593 22.0508 5.43433 22.0508 6.1228 21.3623L12.4998 14.9854L18.8767 21.3623C19.5652 22.0508 20.6736 22.0508 21.3621 21.3623C22.0457 20.6738 22.0457 19.5605 21.3621 18.877Z" fill="white"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <li>
+                                <a class="header__link" href="#">Брухт кольорових металів</a>
+                            </li>
+                            <li>
+                                <a class="header__link active" href="#">Виробництво</a>
+                            </li>
+                            <li>
+                                <a class="header__link" href="#">Ціни</a>
+                            </li>
+                            <li>
+                                <a class="header__link" href="#">Блог</a>
+                            </li>
+                            <li>
+                                <a class="header__link" href="#">Послуги</a>
+                            </li>
+                            <li>
+                                <a class="header__link" href="#">Про компанію</a>
+                            </li>
+                            <li>
+                                <a class="header__link" href="#">Контакти</a>
+                            </li>
+                            <li>
+                                <a class="header__link" href="#">Купити - Продати</a>
+                            </li>
+                            <div class="header__menu-logo">
+                                <img src="img/logo.png" alt="">
+                            </div>
+                        </ul>
+                    </nav>
+                    <div class="header__bottom">
+                        <div class="header__left">
+                            <div class="header__lang">
+                                <p class="header__lang-selected">
+                                    ENGLISH
+                                    <span><img src="img/eng.png" alt=""></span>
+                                </p>
+                                <div class="header__lang-block">
+                                    <a class="header__lang-item" href="#">
+                                        UKRAINE
+                                        <span><img src="img/eng.png" alt=""></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="header__links">
+                                <a href="tel:+380678133113">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                                        <path d="M13.869 6.74365C12.7154 6.74372 11.5836 7.05798 10.5951 7.6527C9.60662 8.24741 8.79876 9.10013 8.25828 10.1193C7.71779 11.1385 7.46509 12.2856 7.52731 13.4375C7.58953 14.5895 7.96431 15.7027 8.61142 16.6577L7.99079 19.0521L10.4862 18.4699C11.3194 18.9941 12.2629 19.3175 13.2425 19.4145C14.222 19.5116 15.2107 19.3796 16.1305 19.029C17.0502 18.6784 17.8759 18.1189 18.5424 17.3945C19.2088 16.6701 19.6978 15.8007 19.9706 14.8549C20.2434 13.9091 20.2927 12.9129 20.1145 11.9448C19.9363 10.9768 19.5355 10.0634 18.9438 9.27676C18.3521 8.49014 17.5856 7.85183 16.7049 7.41222C15.8242 6.97261 14.8534 6.74373 13.869 6.74365ZM16.992 16.5621C16.1037 16.9787 14.249 16.7613 12.2952 15.0892C10.3413 13.4171 9.84013 11.6182 10.1144 10.6763C10.3886 9.73432 11.4659 9.5603 11.6692 9.60528C11.8724 9.65027 12.8887 11.2615 12.7502 11.4494C12.6117 11.6374 11.9428 12.3063 11.9428 12.3063C11.9428 12.3063 11.9147 12.9908 13.1707 14.0658C14.4267 15.1407 15.0986 15.0071 15.0986 15.0071C15.0986 15.0071 15.6563 14.2425 15.8205 14.0769C15.9848 13.9114 17.7337 14.6666 17.8096 14.8604C17.8854 15.0543 17.8802 16.1456 16.992 16.5621Z" fill="#BF7554"/>
+                                        <path d="M13.5 0C6.04415 0 0 6.04415 0 13.5C0 20.9558 6.04415 27 13.5 27C20.9558 27 27 20.9558 27 13.5C27 6.04415 20.9558 0 13.5 0ZM13.8691 20.7748C12.6019 20.7766 11.354 20.4634 10.2379 19.8634L6.1541 20.8828L7.18849 16.8855C6.35497 15.4172 6.02849 13.7151 6.25954 12.0426C6.4906 10.37 7.26631 8.82019 8.46671 7.63281C9.6671 6.44544 11.2253 5.68666 12.9003 5.47386C14.5752 5.26105 16.2736 5.60607 17.7328 6.45554C19.192 7.30502 20.3306 8.61162 20.9726 10.1733C21.6146 11.7349 21.7241 13.4645 21.2842 15.0947C20.8444 16.7248 19.8797 18.1646 18.5393 19.1913C17.1989 20.2181 15.5576 20.7746 13.8691 20.7748Z" fill="#BF7554"/>
+                                    </svg>
+                                    +38 (067) 813-31-13
+                                </a>
+                                <a href="tel:+380678133113">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="25" viewBox="0 0 17 25" fill="none">
+                                        <path d="M16.5836 20.4429L14.4158 24.0652C14.1102 24.5775 13.4987 24.8075 12.929 24.6234C3.13138 21.4564 -2.26287 10.9133 0.902977 1.11647C1.08693 0.547218 1.63143 0.185398 2.22566 0.238047L6.43204 0.600264C7.04484 0.652395 7.53176 1.13653 7.59421 1.7529L8.0394 6.54977C8.09022 7.11427 7.76094 7.64641 7.23328 7.85243L4.59992 8.85538C5.05099 11.9696 6.53046 14.8613 8.79282 17.0505L11.1798 15.5146C11.6524 15.205 12.2819 15.2485 12.7087 15.6238L16.3388 18.7914C16.7595 19.2218 16.8988 19.9187 16.5836 20.4429Z" fill="#AB6444"/>
+                                    </svg>
+                                    +38 (067) 813-31-13
+                                </a>
+                                <a href="mailto:mail@garmet.com.ua">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="17" viewBox="0 0 23 17" fill="none">
+                                        <path d="M11.5 12.75C10.7574 12.75 10.0149 12.51 9.38148 12.0235L0 4.83437V14.875C0 16.0482 0.965371 17 2.15625 17H20.8438C22.0346 17 23 16.0486 23 14.875V4.83437L13.6203 12.0284C12.9869 12.5109 12.2412 12.75 11.5 12.75ZM0.731777 3.59922L10.2642 10.9083C10.9915 11.4661 12.0103 11.4661 12.7376 10.9083L22.27 3.59922C22.69 3.24505 23 2.70052 23 2.125C23 0.95138 22.0342 0 20.8438 0H2.15625C0.965371 0 0 0.95138 0 2.125C0 2.70052 0.269981 3.24505 0.731777 3.59922Z" fill="#BF7554"/>
+                                    </svg>
+                                    mail@garmet.com.ua
+                                </a>
+                            </div>
+                        </div>
+                        <button class="header__basket"><span>2</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="price">
+            <div class="container">
+                <div class="price__inner">
+                    <div class="price__top">
+                        <div class="price__left">
+                            <ul class="breadcrumbs">
+                                <li>
+                                    <a href="#">Головна</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ціни</a>
+                                </li>
+                            </ul>
+                            <h2 class="price__title">Ціни</h2>
+                        </div>
+                        <div class="price__box">
+                            <div class="price__block">
+                                <p class="price__block-name">сьогоднішня дата</p>
+                                <div class="price__block-content">
+                                    <div class="price__block-icon">
+                                        <img src="img/price/calendar.svg" alt="">
+                                    </div>
+                                    <p class="price__block-descr">09.01.2025</p>
+                                </div>
+                            </div>
+                            <div class="price__block">
+                                <p class="price__block-name">переглядів за місяць</p>
+                                <div class="price__block-content">
+                                    <div class="price__block-icon">
+                                        <img src="img/price/eye.svg" alt="">
+                                    </div>
+                                    <p class="price__block-descr">188 652</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price__table">
+                        <div class="price__table-top">
+                            <h3 class="price__table-title">Найменування брухту кольорових металів</h3>
+                            <h3 class="price__table-title">Ціна (грн/тн)</h3>
+                            <h3 class="price__table-title">Торгівля</h3>
+                        </div>
+                        <div class="price__table-content">
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/Cu.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Мідь 1 <br><span>(засміченість 0 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">362 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/Cu.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Мідь <br><span>(засміченість 1 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">342 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/Cu.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Стружка мідна <br><span>(засміченість 1 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">309 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/Cu.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Мідь фосфориста <br><span>(засміченість 0 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">430 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/combine.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Латунь <br><span>(засміченість 1 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">210 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/combine.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Стружка латунна, бронзова <br><span>(засміченість 3 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">202 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/combine.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Радіатори мідно-латунні <br><span>(засміченість 2 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">210 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/ai.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Алюміній побутовий <br><span>(засміченість 1 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">53 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/ai.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Латунь <br><span>(засміченість 1 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">210 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/ai.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Стружка латунна, бронзова <br><span>(засміченість 3 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">202 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/ai.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Радіатори мідно-латунні <br><span>(засміченість 2 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">210 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/combine.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Латунь <br><span>(засміченість 1 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">210 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/combine.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Стружка латунна, бронзова <br><span>(засміченість 3 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">202 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/combine.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Радіатори мідно-латунні <br><span>(засміченість 2 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">210 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+
+                            <div class="price__table-banner mobile-hide">
+                                <img src="img/price/join-1.jpg" alt="">
+                            </div>
+
+                            <div class="price__table-banner--text mobile-show">
+                                <img src="img/price/join-2.jpg" alt="">
+                                <p class="price__table-banner-descr">Приєднуйся до команди Гармет у Запоріжжі – вакансія менеджера (офлайн)!</p>
+                            </div>
+
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/Cu.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Мідь 1 <br><span>(засміченість 0 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">362 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/Cu.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Мідь <br><span>(засміченість 1 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">342 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/Cu.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Стружка мідна <br><span>(засміченість 1 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">309 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/Cu.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Мідь фосфориста <br><span>(засміченість 0 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">430 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/combine.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Латунь <br><span>(засміченість 1 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">210 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/combine.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Стружка латунна, бронзова <br><span>(засміченість 3 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">202 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/combine.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Радіатори мідно-латунні <br><span>(засміченість 2 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">210 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/ai.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Алюміній побутовий <br><span>(засміченість 1 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">53 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/ai.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Латунь <br><span>(засміченість 1 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">210 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/ai.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Стружка латунна, бронзова <br><span>(засміченість 3 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">202 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/ai.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Радіатори мідно-латунні <br><span>(засміченість 2 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">210 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/combine.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Латунь <br><span>(засміченість 1 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">210 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/combine.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Стружка латунна, бронзова <br><span>(засміченість 3 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-up">202 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+                            <div class="price__table-item">
+                                <div class="price__table-left">
+                                    <div class="price__table-icon">
+                                        <img src="img/price/combine.png" alt="">
+                                    </div>
+                                    <p class="price__table-name">Радіатори мідно-латунні <br><span>(засміченість 2 %)</span></p>
+                                </div>
+                                <p class="price__table-price price-down">210 000</p>
+                                <div class="price__table-end">
+                                    <button class="price__table-sell">продати</button>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+                        <div class="price__table-bottom">
+                            <h3 class="price__table-questions">Маєте запитання?</h3>
+                            <button class="price__table-call">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="35" viewBox="0 0 24 35" fill="none">
+                                    <path d="M23.6434 28.6731L20.6436 33.6857C20.2206 34.3947 19.3744 34.713 18.586 34.4582C5.02789 30.0757 -2.43679 15.4859 1.94418 1.92881C2.19874 1.14107 2.95223 0.640379 3.77454 0.713236L9.59542 1.21448C10.4434 1.28662 11.1172 1.95657 11.2037 2.80952L11.8197 9.44754C11.89 10.2287 11.4344 10.9651 10.7042 11.2502L7.06009 12.6381C7.68428 16.9477 9.73161 20.9492 12.8623 23.9786L16.1654 21.8532C16.8195 21.4249 17.6905 21.485 18.2812 22.0043L23.3046 26.3878C23.8867 26.9833 24.0796 27.9477 23.6434 28.6731Z" fill="white"/>
+                                </svg>
+                                дзвоніть нам
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="basket">
+            <div class="container">
+                <form class="basket__inner basket-form" action="#">
+                    <div class="basket-step-content">
+                        <div class="basket-step active">
+                            <h2 class="basket__title">Кошик</h2>
+                            <div class="basket__block">
+                                <div class="basket__item">
+                                    <div class="basket__item-top">
+                                        <div class="basket__item-left">
+                                            <div class="basket__item-icon">
+                                                <img src="img/price/Cu.png" alt="">
+                                            </div>
+                                            <p class="basket__item-name">Мідь 1 <br><span>(засміченість 0 %)</span></p>
+                                        </div>
+                                        <button class="basket__item-dell" type="button"></button>
+                                    </div>
+                                    <div class="basket__item-amount">
+                                        <p class="basket__item-amount--name">кількість</p>
+                                        <div class="basket__item-count">
+                                            <input type="text" name="amount" value="0.2">
+                                            <p class="basket__item-measuring">тн</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="basket__item">
+                                    <div class="basket__item-top">
+                                        <div class="basket__item-left">
+                                            <div class="basket__item-icon">
+                                                <img src="img/price/ai.png" alt="">
+                                            </div>
+                                            <p class="basket__item-name">Алюміній побутовий <br><span>(засміченість 0 %)</span></p>
+                                        </div>
+                                        <button class="basket__item-dell" type="button"></button>
+                                    </div>
+                                    <div class="basket__item-amount">
+                                        <p class="basket__item-amount--name">кількість</p>
+                                        <div class="basket__item-count">
+                                            <input type="text" name="amount" value="3.5">
+                                            <p class="basket__item-measuring">тн</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="basket__item">
+                                    <div class="basket__item-top">
+                                        <div class="basket__item-left">
+                                            <div class="basket__item-icon">
+                                                <img src="img/price/ai.png" alt="">
+                                            </div>
+                                            <p class="basket__item-name">Алюміній побутовий <br><span>(засміченість 0 %)</span></p>
+                                        </div>
+                                        <button class="basket__item-dell" type="button"></button>
+                                    </div>
+                                    <div class="basket__item-amount">
+                                        <p class="basket__item-amount--name">кількість</p>
+                                        <div class="basket__item-count">
+                                            <input type="text" name="amount" value="3.5">
+                                            <p class="basket__item-measuring">тн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket-step">
+                            <button class="basket__close" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="31" viewBox="0 0 29 31" fill="none">
+                                    <path d="M24.7806 23.4073L17.3833 15.4999L24.7806 7.59248C25.5793 6.73877 25.5793 5.36436 24.7806 4.51064C23.982 3.65693 22.6962 3.65693 21.8976 4.51064L14.5003 12.4181L7.10308 4.51064C6.30444 3.65693 5.0187 3.65693 4.22007 4.51064C3.42144 5.36436 3.42144 6.73877 4.22007 7.59248L11.6173 15.4999L4.22007 23.4073C3.42144 24.261 3.42144 25.6355 4.22007 26.4892C5.0187 27.3429 6.30444 27.3429 7.10308 26.4892L14.5003 18.5817L21.8976 26.4892C22.6962 27.3429 23.982 27.3429 24.7806 26.4892C25.5736 25.6355 25.5736 24.255 24.7806 23.4073Z" fill="white"/>
+                                </svg>
+                            </button>
+                            <h3 class="basket__name">крок 1: доставка</h3>
+                            <div class="basket__form">
+                                <div class="basket__form-inputs">
+                                    <input class="form-input" type="text" name="name" placeholder="ваше ім'я" required>
+                                    <input class="form-input" type="email" name="email" placeholder="ваш email" required>
+                                    <input class="form-input" type="tel" name="tel" placeholder="ваш телефон">
+                                    <input class="form-input" type="text" name="company" placeholder="ваша кампанія">
+                                </div>
+                                <p class="basket__form-message">яким способом вважаєте за краще доставити? </p>
+                                <div class="basket__form-delivery">
+                                    <label class="form-label">
+                                        <input class="form-radio" type="radio" name="delivery">
+                                        <span>delivery - auto <img src="img/delGroup.svg" alt=""></span>
+                                    </label>
+                                    <label class="form-label">
+                                        <input class="form-radio" type="radio" name="delivery" checked>
+                                        <span>нова пошта <img src="img/nwe-post.png" alt=""></span>
+                                    </label>
+                                    <label class="form-label">
+                                        <input class="form-radio" type="radio" name="delivery">
+                                        <span>доставлю своїм способом</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket__bottom active">
+                        <div class="basket__bottom-top">
+                            <p class="basket__bottom-name">
+                                <strong>приблизна</strong> сума до отримання
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M16.5 9.75C16.5 11.7391 15.7098 13.6468 14.3033 15.0533C12.8968 16.4598 10.9891 17.25 9 17.25C7.01088 17.25 5.10322 16.4598 3.6967 15.0533C2.29018 13.6468 1.5 11.7391 1.5 9.75C1.5 7.76088 2.29018 5.85322 3.6967 4.4467C5.10322 3.04018 7.01088 2.25 9 2.25C10.9891 2.25 12.8968 3.04018 14.3033 4.4467C15.7098 5.85322 16.5 7.76088 16.5 9.75Z" fill="#2980B9"/>
+                                    <path d="M16.5 9C16.5 10.9891 15.7098 12.8968 14.3033 14.3033C12.8968 15.7098 10.9891 16.5 9 16.5C7.01088 16.5 5.10322 15.7098 3.6967 14.3033C2.29018 12.8968 1.5 10.9891 1.5 9C1.5 7.01088 2.29018 5.10322 3.6967 3.6967C5.10322 2.29018 7.01088 1.5 9 1.5C10.9891 1.5 12.8968 2.29018 14.3033 3.6967C15.7098 5.10322 16.5 7.01088 16.5 9Z" fill="#3498DB"/>
+                                    <path d="M8.25 5.25V6.75H9.75V5.25H8.25ZM7.5 8.25L6.75 9H8.25V13.5H6.75V14.25H7.5H10.5H11.25V13.5H9.75V8.25H7.5Z" fill="#2980B9"/>
+                                    <path d="M8.25 4.5V6H9.75V4.5H8.25ZM7.5 7.5L6.75 8.25H8.25V12.75H6.75V13.5H7.5H10.5H11.25V12.75H9.75V7.5H7.5Z" fill="#ECF0F1"/>
+                                </svg>
+                            </p>
+                            <p class="basket__bottom-price">55 600 ₴</p>
+                        </div>
+                        <button class="basket__order basket__order-next" type="button">оформити заявку</button>
+                        <button class="basket__order basket__order-send" style="display: none;" type="submit">до наступного кроку</button>
+                    </div>
+
+                    <div class="basket__thanks">
+                        <button class="basket__close" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="31" viewBox="0 0 29 31" fill="none">
+                                <path d="M24.7806 23.4073L17.3833 15.4999L24.7806 7.59248C25.5793 6.73877 25.5793 5.36436 24.7806 4.51064C23.982 3.65693 22.6962 3.65693 21.8976 4.51064L14.5003 12.4181L7.10308 4.51064C6.30444 3.65693 5.0187 3.65693 4.22007 4.51064C3.42144 5.36436 3.42144 6.73877 4.22007 7.59248L11.6173 15.4999L4.22007 23.4073C3.42144 24.261 3.42144 25.6355 4.22007 26.4892C5.0187 27.3429 6.30444 27.3429 7.10308 26.4892L14.5003 18.5817L21.8976 26.4892C22.6962 27.3429 23.982 27.3429 24.7806 26.4892C25.5736 25.6355 25.5736 24.255 24.7806 23.4073Z" fill="white"/>
+                            </svg>
+                        </button>
+                        <h3 class="basket__thanks-name">Дякуємо за вашу довіру</h3>
+                        <div class="basket__thanks-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="87" height="87" viewBox="0 0 87 87" fill="none">
+                                <path d="M84.3357 24.4688C84.3357 25.9641 83.1122 27.1875 81.6169 27.1875C81.6169 27.1875 81.5897 27.1875 81.5625 27.1875H5.43754C4.45879 27.1875 3.5616 26.6709 3.07223 25.8281C2.61004 24.9853 2.61004 23.9522 3.07223 23.1094L13.9472 4.07812C14.4366 3.23531 15.3338 2.71875 16.3125 2.71875H70.6875C71.6663 2.71875 72.5635 3.23531 73.0529 4.07812L83.6832 22.7016C84.091 23.1909 84.3357 23.7891 84.3357 24.4688Z" fill="#C9835D"/>
+                                <path d="M84.2812 24.4688V81.5625C84.2812 83.0578 83.0578 84.2812 81.5625 84.2812H5.4375C3.94219 84.2812 2.71875 83.0578 2.71875 81.5625V24.4688H84.2812Z" fill="#63412E"/>
+                                <path d="M72.3867 49.5335L58.793 38.6585C58.6701 38.56 58.5257 38.5114 58.3914 38.4371C58.2824 38.3765 58.1859 38.3045 58.0685 38.2591C57.7599 38.14 57.4393 38.0685 57.1131 38.066C57.1063 38.0663 57.1006 38.0625 57.0938 38.0625C57.087 38.0625 57.0813 38.0663 57.0745 38.0663C56.7485 38.0688 56.4274 38.1403 56.1191 38.2593C56.0017 38.3047 55.9054 38.3765 55.7969 38.4369C55.6624 38.5108 55.5177 38.56 55.3948 38.6585L41.8011 49.5335C40.6301 50.4706 40.439 52.1818 41.3761 53.3541C42.3187 54.5264 44.0231 54.7189 45.1995 53.779L54.3753 46.4384V70.6875C54.3753 72.1888 55.5914 73.4062 57.0941 73.4062C58.5967 73.4062 59.8128 72.1888 59.8128 70.6875V46.4382L68.9886 53.7788C69.4902 54.1798 70.0902 54.375 70.6848 54.375C71.4839 54.375 72.2726 54.0259 72.8114 53.3541C73.7488 52.1821 73.5577 50.4709 72.3867 49.5335Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <p class="basket__thanks-descr">Відправте ваш вантаж через <strong>збірний пункт</strong> компанії Delivery group </p>
+                        <p class="basket__thanks-descr">Після хімічного аналізу ви отримаєте підтвердження оффера</p>
+                        <div class="basket__thanks-bottom">
+                            <p class="basket__thanks-descr">у разі запитань зв'яжіться з нами:</p>
+                            <a href="tel:+380678133113">+38 (067) 813-31-13 </a>
+                            <a href="mailto:mail@garmet.com.ua">mail@garmet.com.ua</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+        <button class="scroll-up">
+            <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" viewBox="0 0 66 66" fill="none">
+                <path d="M34.9525 17.2975C34.691 17.0471 34.3826 16.8509 34.045 16.72C33.3755 16.445 32.6245 16.445 31.955 16.72C31.6174 16.8509 31.309 17.0471 31.0475 17.2975L20.0475 28.2975C19.7911 28.5539 19.5877 28.8583 19.4489 29.1933C19.3102 29.5283 19.2387 29.8874 19.2387 30.25C19.2387 30.6126 19.3102 30.9717 19.4489 31.3067C19.5877 31.6417 19.7911 31.9461 20.0475 32.2025C20.3039 32.4589 20.6083 32.6623 20.9433 32.8011C21.2783 32.9398 21.6374 33.0113 22 33.0113C22.3626 33.0113 22.7217 32.9398 23.0567 32.8011C23.3917 32.6623 23.6961 32.4589 23.9525 32.2025L30.25 25.8775V57.75C30.25 58.4793 30.5397 59.1788 31.0555 59.6945C31.5712 60.2103 32.2707 60.5 33 60.5C33.7293 60.5 34.4288 60.2103 34.9445 59.6945C35.4603 59.1788 35.75 58.4793 35.75 57.75V25.8775L42.0475 32.2025C42.3031 32.4603 42.6073 32.6648 42.9424 32.8045C43.2775 32.9441 43.637 33.0159 44 33.0159C44.363 33.0159 44.7225 32.9441 45.0576 32.8045C45.3927 32.6648 45.6968 32.4603 45.9525 32.2025C46.2103 31.9469 46.4148 31.6427 46.5545 31.3076C46.6941 30.9725 46.7659 30.613 46.7659 30.25C46.7659 29.887 46.6941 29.5275 46.5545 29.1924C46.4148 28.8573 46.2103 28.5531 45.9525 28.2975L34.9525 17.2975ZM52.25 5.5H13.75C13.0207 5.5 12.3212 5.78973 11.8055 6.30546C11.2897 6.82118 11 7.52065 11 8.25C11 8.97935 11.2897 9.67882 11.8055 10.1945C12.3212 10.7103 13.0207 11 13.75 11H52.25C52.9793 11 53.6788 10.7103 54.1945 10.1945C54.7103 9.67882 55 8.97935 55 8.25C55 7.52065 54.7103 6.82118 54.1945 6.30546C53.6788 5.78973 52.9793 5.5 52.25 5.5Z" fill="white"/>
+            </svg>
+        </button>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <p class="footer__copy">© Всі права захищені | garmet.com.ua</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
