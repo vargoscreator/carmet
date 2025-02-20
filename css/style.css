@@ -1109,8 +1109,8 @@ label{
     max-width: 117px;
     overflow: hidden;
 }
-.basket__item-count input{
-    padding: 4px 16px 3px 26px;
+.basket__item-count input {
+    padding: 4px 5px 3px 17px;
     width: 100%;
 }
 .basket__item-measuring{
@@ -1299,6 +1299,16 @@ label{
 }
 .basket__thanks-bottom a:first-of-type{
     margin-top: 7px;
+}
+.basket-form--content:not(.active){
+    display: none;
+}
+.basket__empty{
+    display: none;
+    padding: 40px 20px;
+}
+.basket-form--content:not(.active) ~ .basket__empty{
+    display: block;
 }
 @media (max-width: 999px) {
     .basket__inner {

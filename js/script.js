@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         document.addEventListener("click", function (event) {
-            if (!basketInner.contains(event.target) && !basketOpen.contains(event.target)) {
+            if (!basketInner.contains(event.target) && !basketOpen.contains(event.target) && !event.target.classList.contains("basket__item-dell") && !event.target.classList.contains("price__table-sell")) {
                 basket.classList.remove("show");
                 basketOpen.classList.remove("active");
                 setTimeout(() => {
@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
             thanksBlock.classList.add("active");
             basketSteps[1].classList.remove("active");
             document.querySelector(".basket__bottom").classList.remove("active");
+            form.reset();
             // тест
             
             
@@ -111,6 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
             //         thanksBlock.classList.add("active");
             //         basketSteps[1].classList.remove("active");
             //         document.querySelector(".basket__bottom").classList.remove("active");
+            //         form.reset();
             //     } else {
             //         alert("Ошибка при отправке данных");
             //     }
@@ -139,4 +141,113 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollUp.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
+
+    const cart = document.querySelector(".basket__block");
+    const totalPriceEl = document.querySelector(".basket__bottom-price");
+    const buttonsSell = document.querySelectorAll(".price__table-sell");
+    const basketCount = document.querySelector(".header__basket span");
+    const basketFormContent = document.querySelector(".basket-form--content");
+    
+    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    
+    function saveCart() {
+        localStorage.setItem("cart", JSON.stringify(cartItems));
+    }
+    
+    function updateTotalPrice() {
+        let total = cartItems.reduce((sum, item) => sum + (item.price * item.amount), 0);
+        totalPriceEl.textContent = `${total.toLocaleString()} ₴`;
+    }
+    
+    function updateBasketForm() {
+        if (cartItems.length === 0) {
+            basketFormContent.classList.remove("active");
+        } else {
+            basketFormContent.classList.add("active");
+        }
+        basketCount.textContent = cartItems.length;
+    }
+    
+    function renderCart() {
+        cart.innerHTML = "";
+        cartItems.forEach((item, index) => {
+            const cartItem = document.createElement("div");
+            cartItem.classList.add("basket__item");
+            cartItem.innerHTML = `
+                <div class="basket__item-top">
+                    <div class="basket__item-left">
+                        <div class="basket__item-icon">
+                            <img src="${item.img}" alt="">
+                        </div>
+                        <p class="basket__item-name">${item.name} <br><span>(${item.contamination})</span></p>
+                    </div>
+                    <button class="basket__item-dell" data-index="${index}" type="button"></button>
+                </div>
+                <div class="basket__item-amount">
+                    <p class="basket__item-amount--name">кількість</p>
+                    <div class="basket__item-count">
+                        <input type="number" class="basket__input" step="0.01" min="0.01" value="${item.amount}" data-index="${index}">
+                        <p class="basket__item-measuring">тн</p>
+                    </div>
+                </div>
+            `;
+            cart.appendChild(cartItem);
+        });
+        updateTotalPrice();
+        updateBasketForm();
+    }
+    
+    buttonsSell.forEach(button => {
+        button.addEventListener("click", (e) => {
+            document.querySelector(".basket").classList.add('show')
+            document.querySelector(".header__basket").classList.add('show')
+
+            
+            const itemElement = e.target.closest(".price__table-item");
+            const nameEl = itemElement.querySelector(".price__table-name");
+            const priceEl = itemElement.querySelector(".price__table-price");
+            const imgEl = itemElement.querySelector(".price__table-icon img");
+            
+            
+            const newItem = {
+                name: nameEl.childNodes[0].textContent.trim(),
+                contamination: nameEl.querySelector("span").textContent.trim(),
+                price: parseFloat(priceEl.textContent.replace(/\D/g, "")),
+                img: imgEl.src,
+                amount: 1
+            };
+            
+            cartItems.push(newItem);
+            saveCart();
+            renderCart();
+        });
+    });
+    
+    cart.addEventListener("input", (e) => {
+        if (e.target.classList.contains("basket__input")) {
+            let index = e.target.dataset.index;
+            let newAmount = parseFloat(e.target.value);
+            cartItems[index].amount = newAmount;
+            saveCart();
+            updateTotalPrice();
+        }
+    });
+    
+    cart.addEventListener("click", (e) => {
+        if (e.target.classList.contains("basket__item-dell")) {
+            let index = e.target.dataset.index;
+            cartItems.splice(index, 1);
+            saveCart();
+            renderCart();
+        }
+    });
+    
+    renderCart();
+
+    function clearCart() {
+        cartItems = [];
+        saveCart();
+        renderCart();
+    }
+    
 });
